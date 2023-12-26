@@ -10,6 +10,10 @@
     font-size: 62.5%;
 }
 
+body {
+    transition: background 250ms ease-in;
+}
+
 .changeBackground {
     display: flex;
     justify-content: end;
@@ -20,6 +24,7 @@
     right: 0;
 
 }
+
 
 .changeBackground button {
     width: 6.4rem;
@@ -92,6 +97,7 @@ button {
 
 .darkTheme {
     background: #121214;
+    transition: background 250ms ease-in;
 }
 
 

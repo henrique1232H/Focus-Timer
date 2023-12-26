@@ -5,7 +5,7 @@ const takeQuerySelector = () => {
     const buttonTimer = document.querySelector("#timer");
     const buttonSpeeker = document.querySelector("#speeker");
     const body = document.querySelector("body");
-    const audio = document.querySelector("audio")
+    const audio = document.querySelector("audio");
 
     return {
         buttonChangeTheme,
