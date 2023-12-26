@@ -5,7 +5,7 @@ const takeQuerySelector = () => {
     const buttonTimer = document.querySelector("#timer");
     const buttonSpeeker = document.querySelector("#speeker");
     const body = document.querySelector("body");
-    const audio = document.querySelector("audio");
+    const audio = document.querySelector("audio")
 
     return {
         buttonChangeTheme,
@@ -71,36 +71,36 @@ const changeControls = () => {
     })
 }
 
-let countTimer = 0;
-let secondNumber = 0;
-let thirdNumber = 0
+let seconds = 0;
+let minutes = 0;
+let minutesMoreThan10 = 0
 let interval;
 
 const count = () => {
     
     interval = setInterval(() => {
-        countTimer++;
+        seconds++;
 
         takeQuery.buttonSpeeker.classList.contains("speekerHigh") ? takeQuery.audio.play() : takeQuery.audio.pause(); 
 
 
-        if(countTimer > 0 && countTimer <= 9) {
-            takeQuery.h1.innerHTML = `${thirdNumber}${secondNumber}:0${countTimer}`;
+        if(seconds > 0 && seconds <= 9) {
+            takeQuery.h1.innerHTML = `${minutesMoreThan10}${minutes}:0${seconds}`;
     
         }
-        if(countTimer >= 10){
-            takeQuery.h1.innerHTML = `${thirdNumber}${secondNumber}:${countTimer}`
+        if(seconds >= 10){
+            takeQuery.h1.innerHTML = `${minutesMoreThan10}${minutes}:${seconds}`
         }
     
-        if(countTimer >= 60) {
-           countTimer = 0;
-           secondNumber++;
+        if(seconds >= 60) {
+           seconds = 0;
+           minutes++;
 
         }
 
-        if(secondNumber > 9) {
-            secondNumber = 0;
-            thirdNumber++;
+        if(minutes > 9) {
+            minutes = 0;
+            minutesMoreThan10++;
         }
     }, 1000);
     
@@ -115,8 +115,8 @@ const pause = () => {
 
 const clear = () => {
     setTimeout(() => {
-        countTimer = 0;
-        secondNumber = 0;
+        seconds = 0;
+        minutes = 0;
         takeQuery.h1.innerHTML = "00:00";
 
     })
