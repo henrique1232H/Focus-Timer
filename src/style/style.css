@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+.changeBackground {
+    display: flex;
+    justify-content: end;
+    margin: 2rem 3rem;
+    width: 100%;
+    height: 2vh;
+    position: fixed;
+    right: 0;
+
+}
+
+.changeBackground button {
+    width: 6.4rem;
+    height: 4rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.block {
+    width: min(25rem, 100%);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.6rem;
+
+}
+
+h1 {
+    font-size: 9.6rem;
+}
+
+
+
+.controls {
+    background: #242424;
+    width: 100%;
+    border-radius: 50px;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1.6rem;
+    padding: 0rem 4rem;
+}    
+
+button {
+    background-repeat: no-repeat;
+    background: none;
+    border: none;
+    cursor: pointer;
+    
+}
+
+
+
+.controls button {   
+    height: 6vh;
+    width: 50%;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.controls button:nth-child(1) {
+    margin-left: 1rem;
+}
+/*Variables */
+
+
+.darkTheme {
+    background: #121214;
+}
+
+
+.white {
+    color: #fff;
+}
+
+.sun {
+    background-image: url("../svg/sun-bold.svg");
+}    
+
+
+.moon {
+    background-image: url("../svg/moon-bold.svg");
+}    
+
+.sun {
+    background-image: url("../svg//sun-bold.svg");
+}    
+
+.play {
+    background-image: url("../svg/play-circle.svg");
+}    
+
+.timer {
+    background-image: url("../svg/timer.svg");
+}
+
+
+.speekerNone {
+    background-image: url("../svg/speeker-none.svg");
+}    
+
+.pause {
+    background-image: url("../svg/pause-circle.svg");
+}
+
+.stop {
+    background-image: url("../svg/stop-circle.svg");
+}
+
+.speekerHigh {
+    background-image: url("../svg/speeker-high.svg");
+}
