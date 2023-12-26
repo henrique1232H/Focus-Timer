@@ -25,7 +25,10 @@ const darkTheme = () => {
         takeQuery.body.classList.toggle("darkTheme");
         takeQuery.buttonChangeTheme.classList.toggle("sun");
         takeQuery.h1.classList.toggle("white");
-        takeQuery.audio.play();
+
+        if(!takeQuery.buttonSpeeker.classList.contains("speekerHigh")) {
+            takeQuery.audio.play();
+        }
     })
 }
 
