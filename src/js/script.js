@@ -73,35 +73,37 @@ const changeControls = () => {
 
 let seconds = 0;
 let minutes = 0;
-let minutesMoreThan10 = 0
 let interval;
 
 const count = () => {
     
     interval = setInterval(() => {
         seconds++;
-
+        
         takeQuery.buttonSpeeker.classList.contains("speekerHigh") ? takeQuery.audio.play() : takeQuery.audio.pause(); 
-
-
+        
         if(seconds > 0 && seconds <= 9) {
-            takeQuery.h1.innerHTML = `${minutesMoreThan10}${minutes}:0${seconds}`;
-    
+            takeQuery.h1.innerHTML = `0${minutes}:0${seconds}`;
+            
         }
         if(seconds >= 10){
-            takeQuery.h1.innerHTML = `${minutesMoreThan10}${minutes}:${seconds}`
+            takeQuery.h1.innerHTML = `0${minutes}:${seconds}`
         }
-    
+        
         if(seconds >= 60) {
-           seconds = 0;
-           minutes++;
-
+            seconds = 0;
+            minutes++;
+            
         }
 
-        if(minutes > 9) {
-            minutes = 0;
-            minutesMoreThan10++;
+        if(minutes > 9 && seconds > 0 && seconds <= 9) {
+            takeQuery.h1.innerHTML = `${minutes}:0${seconds}`
         }
+        
+        if(minutes > 9 && seconds >= 10) {
+            takeQuery.h1.innerHTML  =`${minutes}:${seconds}`
+        }
+
     }, 1000);
     
     
