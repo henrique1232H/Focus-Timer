@@ -1,36 +1,7 @@
-const takeQuerySelector = () => {
-    const buttonChangeTheme = document.querySelector(".changeBackground button");
-    const h1 = document.querySelector("h1");
-    const buttonPlay = document.querySelector("#play");
-    const buttonTimer = document.querySelector("#timer");
-    const buttonSpeeker = document.querySelector("#speeker");
-    const body = document.querySelector("body");
-    const audio = document.querySelector("audio")
+import takeQuery from "./elements.js";
+import darkTheme from "./darkTheme.js";
 
-    return {
-        buttonChangeTheme,
-        h1,
-        buttonPlay,
-        buttonTimer,
-        buttonSpeeker,
-        body,
-        audio
-    }
-}
-
-const takeQuery = takeQuerySelector();
-
-const darkTheme = () => {
-    takeQuery.buttonChangeTheme.addEventListener("click", () => {
-        takeQuery.body.classList.toggle("darkTheme");
-        takeQuery.buttonChangeTheme.classList.toggle("sun");
-        takeQuery.h1.classList.toggle("white");
-
-        if(!takeQuery.buttonSpeeker.classList.contains("speekerHigh")) {
-            takeQuery.audio.play();
-        }
-    })
-}
+darkTheme()
 
 const changeControls = () => {
     takeQuery.buttonPlay.addEventListener("click", () => {
